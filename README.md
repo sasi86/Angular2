@@ -25,4 +25,20 @@ export class NameComponent implements OnInit {
 
 Coordinates communication between the component's class and its template and often involves passing data.
 
+1. Interpolation - oneway binding - {{template_expression}}
+
+ex: {{pageTitle}}
+
+# Property Bindings
+
+list of properties that could be bind is found @ https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+
+# Directives 
+
+1. Custom Directive - Component as a directives
+2. Builtin directive - Structural Directive found in BrowserModule
+*ngIf='expression'
+*ngFor='let ... of ...'
+
+
 
