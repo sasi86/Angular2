@@ -8,8 +8,12 @@ Components = Template + [class = properties + Method] + Metadata
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+    module: module.Id, // to mention relative path in templateUrl and styleUrl
     selector: 'selector-name',
-    templateUrl: 'name.component.html'
+    template: `` || "" //backticks supports multiline templating where double quotes doesn't
+    templateUrl: 'name.component.html',
+    style: '',
+    styleUrl: 'name.css'
 })
 
 export class NameComponent implements OnInit {
@@ -17,3 +21,8 @@ export class NameComponent implements OnInit {
     ngOnInit() { }
 }
 ```
+# Bindings
+
+Coordinates communication between the component's class and its template and often involves passing data.
+
+
