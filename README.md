@@ -4,6 +4,7 @@
 
 Components = Template + [class = properties + Method] + Metadata
 
+```javascript
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,6 +14,6 @@ import { Component, OnInit } from '@angular/core';
 
 export class NameComponent implements OnInit {
     constructor() { }
-
     ngOnInit() { }
 }
+```
