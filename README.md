@@ -1,6 +1,6 @@
 # Angular2
 
-# Components
+## Components
 
 Components = Template + [class = properties + Method] + Metadata
 
@@ -21,23 +21,23 @@ export class NameComponent implements OnInit {
     ngOnInit() { }
 }
 ```
-# Bindings
+## Bindings
 
 Coordinates communication between the component's class and its template and often involves passing data.
 
-# Interpolation - oneway binding - without quotes
+### Interpolation - oneway binding - without quotes
 
 {{template_expression}}
 
 ex: {{pageTitle}}
 
-# Event Bindings 
+### Event Bindings 
 
 <button (click)= 'toggleImage()'>
 
 List of events : https://developer.mozilla.org/en-US/docs/Web/Events
 
-# Twoway Binding
+### Twoway Binding
 
 [(ngmodel)]='expression'
 
@@ -71,6 +71,13 @@ list of properties that could be bind is found @ https://developer.mozilla.org/e
 Transforms bound properties before display.
 
 Built-in pipes : date,number,currency,percent,decimal,json,slice,lowercase,uppercase ....
+
+Chaining pipes : {{product.price | currency | lowercase}}
+pipes with Parameters : {{ product.price | currency : 'USD' : true : '1.2-2'
+- currency code
+- display currency symbol
+- min # of integer digits, min # decimal digits, max # of decimal digits
+
 Custom Pipes : 
 
 
