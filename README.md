@@ -25,9 +25,35 @@ export class NameComponent implements OnInit {
 
 Coordinates communication between the component's class and its template and often involves passing data.
 
-1. Interpolation - oneway binding - {{template_expression}}
+# Interpolation - oneway binding - without quotes
+
+{{template_expression}}
 
 ex: {{pageTitle}}
+
+# Event Bindings 
+
+<button (click)= 'toggleImage()'>
+
+List of events : https://developer.mozilla.org/en-US/docs/Web/Events
+
+# Twoway Binding
+
+[(ngmodel)]='expression'
+
+ngModel directive is part of FormsModule. FormModule need to be imported to the appmodule. Do the following
+
+```javascript
+import { FormsModule} from '@angular/forms'
+
+@NgModule({
+import: [FormsModule],
+declarations: [...],
+providers: [...],
+bootstrap:[AppComponent]
+})
+export class AppModule{}
+```
 
 # Property Bindings
 
@@ -39,6 +65,13 @@ list of properties that could be bind is found @ https://developer.mozilla.org/e
 2. Builtin directive - Structural Directive found in BrowserModule
 *ngIf='expression'
 *ngFor='let ... of ...'
+
+# Pipes 
+
+Transforms bound properties before display.
+
+Built-in pipes : date,number,currency,percent,decimal,json,slice,lowercase,uppercase ....
+Custom Pipes : 
 
 
 
